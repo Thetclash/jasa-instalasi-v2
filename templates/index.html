@@ -1,33 +1,58 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasa Instalasi - Profesional</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jasa Instalasi - Premium Style</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
 
-<section class="card-slider">
-    <div class="card" onclick="redirectWA('Jasa Instalasi Listrik Arus Kuat')">
-        <img src="{{ url_for('static', filename='images/arus-kuat.jpg') }}" alt="Arus Kuat">
-        <h3>Instalasi Listrik Arus Kuat</h3>
-        <p>Profesional dan aman untuk kebutuhan industri dan rumah Anda.</p>
-    </div>
+  <div class="header">
+    <h1>Jasa Instalasi Profesional</h1>
+    <p>Pilih layanan terbaik kami</p>
+  </div>
 
-    <div class="card" onclick="redirectWA('Jasa Instalasi Arus Lemah')">
-        <img src="{{ url_for('static', filename='images/arus-lemah.jpg') }}" alt="Arus Lemah">
-        <h3>Instalasi Arus Lemah</h3>
-        <p>Khusus untuk jaringan data, telekomunikasi, dan lainnya.</p>
-    </div>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
 
-    <div class="card" onclick="redirectWA('Pemasangan CCTV')">
-        <img src="{{ url_for('static', filename='images/cctv.jpg') }}" alt="CCTV">
-        <h3>Pemasangan CCTV</h3>
-        <p>Pengawasan keamanan terbaik dengan instalasi kamera profesional.</p>
-    </div>
-</section>
+      <!-- Card 1 -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="/static/images/listrik.jpg" alt="Instalasi Listrik">
+          <h2>Instalasi Listrik Arus Kuat</h2>
+          <p>Solusi listrik aman & terpercaya</p>
+        </div>
+      </div>
 
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+      <!-- Card 2 -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="/static/images/arus_lemah.jpg" alt="Instalasi Arus Lemah">
+          <h2>Instalasi Arus Lemah</h2>
+          <p>Network, audio visual, dan control systems</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="/static/images/cctv.jpg" alt="Pemasangan CCTV">
+          <h2>Pemasangan CCTV Kamera</h2>
+          <p>Monitoring real-time, keamanan 24 jam</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="order-button">
+    <a href="https://wa.me/62xxxxxxx?text=Halo%20saya%20ingin%20memesan%20jasa%20instalasi" target="_blank">Pesan Sekarang</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/static/js/script.js"></script>
+
 </body>
 </html>
