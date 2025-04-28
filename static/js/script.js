@@ -1,6 +1,10 @@
-function redirectWA(serviceName) {
-    const phoneNumber = "6282253823713"; // Ganti dengan nomor WA Anda
-    const message = encodeURIComponent(`Halo, saya tertarik dengan layanan ${serviceName}. Bisa dibantu?`);
-    const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.location.href = waUrl;
-}
+var swiper = new Swiper(".mySwiper", {
+  effect: "cards",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  loop: true,
+  cardsEffect: {
+    slideShadows: true,
+  },
+});
