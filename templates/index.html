@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasa Instalasi CCTV & Listrik - Web3 Style</title>
-    <link href="/static/css/style.css" rel="stylesheet">
+    <title>Jasa Instalasi - Profesional</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body class="bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 min-h-screen flex flex-col justify-center items-center text-white">
-    <div class="glass p-10 rounded-2xl shadow-lg text-center animate-fade-in">
-        <h1 class="text-4xl font-bold mb-4">Jasa Instalasi Profesional</h1>
-        <p class="mb-6">CCTV | Arus Lemah | Arus Kuat</p>
-        <form class="space-y-4">
-            <input type="text" placeholder="Nama" class="input-field">
-            <input type="email" placeholder="Email" class="input-field">
-            <textarea placeholder="Pesan Anda" class="input-field h-32"></textarea>
-            <button type="submit" class="btn-primary">Kirim Pesan</button>
-        </form>
+<body>
+
+<section class="card-slider">
+    <div class="card" onclick="redirectWA('Jasa Instalasi Listrik Arus Kuat')">
+        <img src="{{ url_for('static', filename='images/arus-kuat.jpg') }}" alt="Arus Kuat">
+        <h3>Instalasi Listrik Arus Kuat</h3>
+        <p>Profesional dan aman untuk kebutuhan industri dan rumah Anda.</p>
     </div>
-    <script src="/static/js/script.js"></script>
+
+    <div class="card" onclick="redirectWA('Jasa Instalasi Arus Lemah')">
+        <img src="{{ url_for('static', filename='images/arus-lemah.jpg') }}" alt="Arus Lemah">
+        <h3>Instalasi Arus Lemah</h3>
+        <p>Khusus untuk jaringan data, telekomunikasi, dan lainnya.</p>
+    </div>
+
+    <div class="card" onclick="redirectWA('Pemasangan CCTV')">
+        <img src="{{ url_for('static', filename='images/cctv.jpg') }}" alt="CCTV">
+        <h3>Pemasangan CCTV</h3>
+        <p>Pengawasan keamanan terbaik dengan instalasi kamera profesional.</p>
+    </div>
+</section>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
